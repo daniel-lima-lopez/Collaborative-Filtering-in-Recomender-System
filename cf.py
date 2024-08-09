@@ -61,6 +61,7 @@ class CollabFilt():
 
                     # save the predicted mean
                     self.M_pred[ui,i] = mean_ui
+        return self.M_pred
     
     # k-nearesth neighbors of ui
     def kNN (self, ui): 
