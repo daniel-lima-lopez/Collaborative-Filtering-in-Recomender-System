@@ -12,18 +12,18 @@ cd Collaborative-Filtering-in-Recomender-System
 ```
 
 ## Method description
-Give a system with $M$ users and $N$ items, a Recomender System is caracterized by a matrix $R\in\mathbb{R}^{M\times N}$, denominated interaction matrix. Each $r_{u,i}\in R$ represents the preference of user $u$ for item $i$.
+Given a system with $M$ users and $N$ items, a Recommender System is characterized  by a matrix $R\in\mathbb{R}^{M\times N}$, denominated interaction matrix. Each $r_{u,i}\in R$ represents the preference of user $u$ for item $i$.
 
-The Collaborative Filtering technique leverages the information of similar users to predict posible new preferences. This process is divided in the following steps. For a user $u$:
+The Collaborative Filtering technique leverages the information of similar users to predict possible  new preferences. This process is divided in the following steps. For a user $u$:
 1. Obtain the vector of preferences $r^{(u)}=\{r_{u1}, r_{u2},\dots, u_{uN}\}$ (u-th row).
-2. Identify the k-Nearest Neighbors $r^{u_k}$ to $r^{(u)}$, that is the users with similir preferences as $u$.
+2. Identify the k-Nearest Neighbors $r^{u_k}$ to $r^{(u)}$, that is, the users with similar preferences as $u$.
 3. For each unknown preference $r_{uj}$, calculate the mean of the k-Nearest Neighbors preferences for item $j$, as long as these users have a defined preference for this item.
 
 ## Experiments
-The notebook [exp1.ipynb](exp1.ipynb) presents 10-folds cross-validation experiments with different k-values. On each experiment it is measeure the Mean Squared Error (MSE) between the test and predicted R-matrix. The best result is acchieved with $k=3$, as shown below:
+The notebook [exp1.ipynb](exp1.ipynb) presents 10-folds cross-validation experiments with different k-values. On each experiment, it is measure the Mean Squared Error (MSE) between the test and predicted R-matrix. The best result is achieved with $k=3$, as shown below:
 <img src="imgs/MSE_ks.png" alt="drawing" width="600"/>
 
-A simple experiment with this k values is performed on the Notebook [exp2.ipynb](exp2.ipynb). It is presented some examples of users' favorite movies, accompanied by the method's prediction of possible new preferences:
+A simple experiment with this k value is performed on the Notebook [exp2.ipynb](exp2.ipynb). It is presented some examples of users' favorite movies, accompanied by the method's prediction of possible new preferences:
 ```
 Top u1 movies:
  - Mad Max: Fury Road (2015)
