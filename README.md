@@ -21,6 +21,7 @@ The Collaborative Filtering technique leverages the information of similar users
 
 ## Experiments
 The notebook [exp1.ipynb](exp1.ipynb) presents 10-folds cross-validation experiments with different k-values. On each experiment, it is measure the Mean Squared Error (MSE) between the test and predicted R-matrix. The best result is achieved with $k=3$, as shown below:
+
 <img src="imgs/MSE_ks.png" alt="drawing" width="600"/>
 
 A simple experiment with this k value is performed on the Notebook [exp2.ipynb](exp2.ipynb). It is presented some examples of users' favorite movies, accompanied by the method's prediction of possible new preferences:
